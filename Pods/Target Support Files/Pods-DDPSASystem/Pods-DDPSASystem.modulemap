@@ -1,0 +1,6 @@
+framework module Pods_DDPSASystem {
+  umbrella header "Pods-DDPSASystem-umbrella.h"
+
+  export *
+  module * { export * }
+}
