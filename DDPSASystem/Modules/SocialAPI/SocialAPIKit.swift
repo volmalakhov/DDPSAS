@@ -15,6 +15,12 @@ enum SocialNetwork {
     case vk
 }
 
+typealias APIIdentifier = String
+typealias ObjectsCount  = Int
+
+typealias AccessToken = String
+typealias AccessTokenHandle = ((AccessToken, SocialNetwork) -> ())
+
 final class SocialAPIKit {
     
     func constractRequest<T>(with networks: [SocialNetwork]) -> T? {

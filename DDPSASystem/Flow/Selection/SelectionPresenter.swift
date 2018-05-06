@@ -10,9 +10,10 @@ import Foundation
 
 protocol SelectionPresenterProtocol {
     
+    func start()
 }
 
-final class SelectionPresenter {
+final class SelectionPresenter: SelectionPresenterProtocol {
     
     var viewLayer: SelectionViewLayerProtocol?
     var interactor: SelectionInteractorProtocol?
@@ -24,18 +25,15 @@ final class SelectionPresenter {
     
     func subscriptForEvents() {
         
-        viewLayer?.onSocialButtonTapped = select
+        viewLayer?.onSocialButtonTapped = selectNetwork
+        viewLayer?.onGetSocialAccessToken = saveNetworkAccessToken
+        viewLayer?.onReadyToRouteNext = routeToSearch
     }
-}
-
-extension SelectionPresenter: SelectionPresenterProtocol {
-    
-    
 }
 
 private extension SelectionPresenter {
     
-    func select(_ type: SocialButtonType) {
+    func selectNetwork(_ type: SocialButtonType) {
         switch type {
         case .instagram: interactor?.needAuthentication(authURL: { [weak self] (url) in
             self?.viewLayer?.loadWeb(with: url)
@@ -43,5 +41,17 @@ private extension SelectionPresenter {
         case .facebook: break
         case .vk: break
         }
+    }
+    
+    func saveNetworkAccessToken(_ token: AccessToken, _ social: SocialNetwork) {
+        let commonStorage = CommonDataStorage()
+        commonStorage.saveAccessToken(with: social, data: token)
+    }
+    
+    func routeToSearch() {
+        
+        //
+        
+        
     }
 }

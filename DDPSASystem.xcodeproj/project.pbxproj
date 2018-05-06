@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		420067BF209F0FE400C8A5AC /* RESTMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420067BE209F0FE400C8A5AC /* RESTMethod.swift */; };
+		420067C2209F1C7800C8A5AC /* CommonDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420067C1209F1C7800C8A5AC /* CommonDataStorage.swift */; };
+		420067C5209F358E00C8A5AC /* VKAPIInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420067C4209F358E00C8A5AC /* VKAPIInterface.swift */; };
 		42247A172098D3A500E2026B /* REST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42247A162098D3A500E2026B /* REST.swift */; };
 		42247A192098D41800E2026B /* RESTError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42247A182098D41800E2026B /* RESTError.swift */; };
 		42247A1E2098D88100E2026B /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42247A1D2098D88100E2026B /* WebView.swift */; };
@@ -43,6 +46,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		420067BE209F0FE400C8A5AC /* RESTMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTMethod.swift; sourceTree = "<group>"; };
+		420067C1209F1C7800C8A5AC /* CommonDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonDataStorage.swift; sourceTree = "<group>"; };
+		420067C4209F358E00C8A5AC /* VKAPIInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKAPIInterface.swift; sourceTree = "<group>"; };
 		42247A162098D3A500E2026B /* REST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = REST.swift; sourceTree = "<group>"; };
 		42247A182098D41800E2026B /* RESTError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTError.swift; sourceTree = "<group>"; };
 		42247A1D2098D88100E2026B /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
@@ -103,11 +109,27 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		420067C0209F1C4F00C8A5AC /* CommonDataStorage */ = {
+			isa = PBXGroup;
+			children = (
+				420067C1209F1C7800C8A5AC /* CommonDataStorage.swift */,
+			);
+			path = CommonDataStorage;
+			sourceTree = "<group>";
+		};
+		420067C3209F215900C8A5AC /* Search */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		42247A152098D39400E2026B /* REST */ = {
 			isa = PBXGroup;
 			children = (
 				42247A162098D3A500E2026B /* REST.swift */,
 				42247A182098D41800E2026B /* RESTError.swift */,
+				420067BE209F0FE400C8A5AC /* RESTMethod.swift */,
 			);
 			path = REST;
 			sourceTree = "<group>";
@@ -177,6 +199,7 @@
 		428D5DEE2084DC34004237C1 /* DDPSASystem */ = {
 			isa = PBXGroup;
 			children = (
+				420067C0209F1C4F00C8A5AC /* CommonDataStorage */,
 				42F64B102098EF0500A7658A /* Extension */,
 				42247A1A2098D84800E2026B /* UI */,
 				428D5E052084DC70004237C1 /* Flow */,
@@ -231,6 +254,7 @@
 		428D5E052084DC70004237C1 /* Flow */ = {
 			isa = PBXGroup;
 			children = (
+				420067C3209F215900C8A5AC /* Search */,
 				424B6F892098DC57008FF6FE /* Selection */,
 			);
 			path = Flow;
@@ -309,6 +333,7 @@
 		428D5E1F2098BFD2004237C1 /* VK */ = {
 			isa = PBXGroup;
 			children = (
+				420067C4209F358E00C8A5AC /* VKAPIInterface.swift */,
 			);
 			path = VK;
 			sourceTree = "<group>";
@@ -523,10 +548,12 @@
 				424B6F882098DB55008FF6FE /* AppCoordinator.swift in Sources */,
 				42247A192098D41800E2026B /* RESTError.swift in Sources */,
 				424B6F8D2098DC8D008FF6FE /* SelectionPresenter.swift in Sources */,
+				420067C2209F1C7800C8A5AC /* CommonDataStorage.swift in Sources */,
 				42E68DF32098CC49004BFEF4 /* InstLocation.swift in Sources */,
 				428D5E102084E7A6004237C1 /* ConnectionType.swift in Sources */,
 				428D5E162084F30D004237C1 /* ClientCoordinator.swift in Sources */,
 				42247A1E2098D88100E2026B /* WebView.swift in Sources */,
+				420067C5209F358E00C8A5AC /* VKAPIInterface.swift in Sources */,
 				428D5E212098BFEF004237C1 /* InstagramAPIInterface.swift in Sources */,
 				42F64B122098EF1C00A7658A /* Extension+UIView.swift in Sources */,
 				42E68DE72098CA60004BFEF4 /* InstTag.swift in Sources */,
@@ -539,6 +566,7 @@
 				424B6F8B2098DC81008FF6FE /* SelectionViewLayer.swift in Sources */,
 				428D5E1C2098BF3E004237C1 /* SocialAPIKit.swift in Sources */,
 				428D5E0A2084E1F0004237C1 /* ChargeLevel.swift in Sources */,
+				420067BF209F0FE400C8A5AC /* RESTMethod.swift in Sources */,
 				428D5E072084DC85004237C1 /* Client.swift in Sources */,
 				42E68DF12098CC15004BFEF4 /* InstVideo.swift in Sources */,
 				42E68DEE2098CB89004BFEF4 /* InstMediaType.swift in Sources */,

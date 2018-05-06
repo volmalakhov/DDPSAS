@@ -42,7 +42,7 @@ private extension SocialButton {
     
     func config(_ type: SocialButtonType) {
         setTitle(type.title, for: .normal)
-        backgroundColor = .blue
+        backgroundColor = .gray
         layer.cornerRadius = 12
     }
 }
