@@ -11,7 +11,7 @@ import SnapKit
 
 private struct Size {
     
-    static let topOffset   = 50.0
+    static let topOffset   = 100.0
     static let leftOffset  = 15.0
     static let rightOffset = -15.0
 }
@@ -46,7 +46,6 @@ final class SelectionView: UIView {
     private let vkButton: SocialButton = {
         let button = SocialButton(with: .vk)
         button.addTarget(self, action: #selector(vkButtonAction), for: .touchUpInside)
-        button.isEnabled = false
         return button
     }()
     

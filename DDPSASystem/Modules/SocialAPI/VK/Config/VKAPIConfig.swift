@@ -1,5 +1,5 @@
 //
-//  RESTMethod.swift
+//  VKAPIConfig.swift
 //  DDPSASystem
 //
 //  Created by Vladimir Malakhov on 06.05.18.
@@ -8,8 +8,7 @@
 
 import Foundation
 
-struct HTTPMethod {
+struct VKAPIConfig {
     
-    static let POST = "POST"
-    static let GET  = "GET"
+    static let appID = "6470766"
 }

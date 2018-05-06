@@ -12,6 +12,7 @@ enum AppState {
     
     case onboarding
     case selection
+    case search
 }
 
 final class AppCoordinator {
@@ -19,29 +20,16 @@ final class AppCoordinator {
     var appRouter: AppRouterProtocol?
     
     func start(with state: AppState) {
-        switch state {
-        case .onboarding:
-            constractOnboarding()
-        case .selection:
-            constractSelection()
-        }
+        constractUserFlow(with: state)
     }
 }
 
 private extension AppCoordinator {
     
-    func constractOnboarding() {
-        // ready to extension
-    }
-    
-    func constractSelection() {
+    func constractUserFlow(with state: AppState) {
         
-        let viewLayer = SelectionViewLayer()
-        let presenter = SelectionPresenter()
-        let interactor = SelectionInteractor()
-        presenter.viewLayer = viewLayer
-        presenter.interactor = interactor
-        presenter.start()
-        appRouter?.setRoot(controller: viewLayer)
+        let appWireframe = AppWireframe()
+        appWireframe.appRouter = appRouter
+        appWireframe.buildFlow(with: state)
     }
 }

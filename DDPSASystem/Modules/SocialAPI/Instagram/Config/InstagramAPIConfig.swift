@@ -15,7 +15,6 @@ enum InstagramAPIConfig {
             return "12488095d36a4848a6282faeafe4778e"
         }
     }
-    
     private var redirect: String {
         get {
             return "https://www.instagram.com/returnisnil/"

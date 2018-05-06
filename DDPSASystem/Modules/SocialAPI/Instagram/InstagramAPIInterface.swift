@@ -15,8 +15,6 @@ enum InstagramAPIEndpoints {
 
 final class InstagramAPIInterface {
     
-    private let coreAPI = CoreAPI() as CoreAPIProtocol
-    
     func authentication(urlToRequest: @escaping (String) -> ()) {
         let authURL = InstagramAPIConfig.auth.url
         urlToRequest(authURL)

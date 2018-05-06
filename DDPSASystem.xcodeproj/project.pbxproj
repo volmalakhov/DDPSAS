@@ -7,12 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		420067BF209F0FE400C8A5AC /* RESTMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420067BE209F0FE400C8A5AC /* RESTMethod.swift */; };
-		420067C2209F1C7800C8A5AC /* CommonDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420067C1209F1C7800C8A5AC /* CommonDataStorage.swift */; };
-		420067C5209F358E00C8A5AC /* VKAPIInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420067C4209F358E00C8A5AC /* VKAPIInterface.swift */; };
+		420067CA209F39B700C8A5AC /* VKAPIInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420067C9209F39B700C8A5AC /* VKAPIInterface.swift */; };
+		420067CD209F3A2F00C8A5AC /* VKAPIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420067CC209F3A2F00C8A5AC /* VKAPIConfig.swift */; };
 		42247A172098D3A500E2026B /* REST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42247A162098D3A500E2026B /* REST.swift */; };
 		42247A192098D41800E2026B /* RESTError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42247A182098D41800E2026B /* RESTError.swift */; };
 		42247A1E2098D88100E2026B /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42247A1D2098D88100E2026B /* WebView.swift */; };
+		4231CCD1209F54B0001752EE /* Extension+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231CCD0209F54B0001752EE /* Extension+UIColor.swift */; };
+		4231CCD4209F5A0D001752EE /* CommonDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231CCD3209F5A0D001752EE /* CommonDataStorage.swift */; };
+		4231CCD8209F5C24001752EE /* SearchViewLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231CCD7209F5C24001752EE /* SearchViewLayer.swift */; };
+		4231CCDA209F5C2F001752EE /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231CCD9209F5C2F001752EE /* SearchView.swift */; };
+		4231CCDC209F5C41001752EE /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231CCDB209F5C41001752EE /* SearchPresenter.swift */; };
+		4231CCDE209F5C54001752EE /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231CCDD209F5C54001752EE /* SearchInteractor.swift */; };
+		4231CCE0209F5DC2001752EE /* AppWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231CCDF209F5DC2001752EE /* AppWireframe.swift */; };
 		424B6F882098DB55008FF6FE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424B6F872098DB55008FF6FE /* AppCoordinator.swift */; };
 		424B6F8B2098DC81008FF6FE /* SelectionViewLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424B6F8A2098DC81008FF6FE /* SelectionViewLayer.swift */; };
 		424B6F8D2098DC8D008FF6FE /* SelectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424B6F8C2098DC8D008FF6FE /* SelectionPresenter.swift */; };
@@ -46,12 +52,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		420067BE209F0FE400C8A5AC /* RESTMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTMethod.swift; sourceTree = "<group>"; };
-		420067C1209F1C7800C8A5AC /* CommonDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonDataStorage.swift; sourceTree = "<group>"; };
-		420067C4209F358E00C8A5AC /* VKAPIInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKAPIInterface.swift; sourceTree = "<group>"; };
+		420067C9209F39B700C8A5AC /* VKAPIInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKAPIInterface.swift; sourceTree = "<group>"; };
+		420067CC209F3A2F00C8A5AC /* VKAPIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKAPIConfig.swift; sourceTree = "<group>"; };
 		42247A162098D3A500E2026B /* REST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = REST.swift; sourceTree = "<group>"; };
 		42247A182098D41800E2026B /* RESTError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTError.swift; sourceTree = "<group>"; };
 		42247A1D2098D88100E2026B /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		4231CCD0209F54B0001752EE /* Extension+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIColor.swift"; sourceTree = "<group>"; };
+		4231CCD3209F5A0D001752EE /* CommonDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonDataStorage.swift; sourceTree = "<group>"; };
+		4231CCD7209F5C24001752EE /* SearchViewLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewLayer.swift; sourceTree = "<group>"; };
+		4231CCD9209F5C2F001752EE /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		4231CCDB209F5C41001752EE /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
+		4231CCDD209F5C54001752EE /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
+		4231CCDF209F5DC2001752EE /* AppWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWireframe.swift; sourceTree = "<group>"; };
 		424B6F872098DB55008FF6FE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		424B6F8A2098DC81008FF6FE /* SelectionViewLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewLayer.swift; sourceTree = "<group>"; };
 		424B6F8C2098DC8D008FF6FE /* SelectionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionPresenter.swift; sourceTree = "<group>"; };
@@ -109,19 +121,27 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		420067C0209F1C4F00C8A5AC /* CommonDataStorage */ = {
+		420067CB209F3A1900C8A5AC /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				420067C1209F1C7800C8A5AC /* CommonDataStorage.swift */,
+				42F64B1B209908FE00A7658A /* InstagramAPIConfig.swift */,
 			);
-			path = CommonDataStorage;
+			path = Config;
 			sourceTree = "<group>";
 		};
-		420067C3209F215900C8A5AC /* Search */ = {
+		420067CE209F3A3300C8A5AC /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				420067CC209F3A2F00C8A5AC /* VKAPIConfig.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		420067CF209F3A3D00C8A5AC /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Search;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		42247A152098D39400E2026B /* REST */ = {
@@ -129,7 +149,6 @@
 			children = (
 				42247A162098D3A500E2026B /* REST.swift */,
 				42247A182098D41800E2026B /* RESTError.swift */,
-				420067BE209F0FE400C8A5AC /* RESTMethod.swift */,
 			);
 			path = REST;
 			sourceTree = "<group>";
@@ -145,6 +164,7 @@
 		42247A1B2098D85400E2026B /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				4231CCE9209F6EF5001752EE /* SearchTable */,
 				42F64B132098F09300A7658A /* SocialButton */,
 				42247A1C2098D86B00E2026B /* WebView */,
 			);
@@ -157,6 +177,55 @@
 				42247A1D2098D88100E2026B /* WebView.swift */,
 			);
 			path = WebView;
+			sourceTree = "<group>";
+		};
+		4231CCD2209F59F9001752EE /* CommonDataStorage */ = {
+			isa = PBXGroup;
+			children = (
+				4231CCD3209F5A0D001752EE /* CommonDataStorage.swift */,
+			);
+			path = CommonDataStorage;
+			sourceTree = "<group>";
+		};
+		4231CCD5209F5BF7001752EE /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				4231CCDB209F5C41001752EE /* SearchPresenter.swift */,
+				4231CCDD209F5C54001752EE /* SearchInteractor.swift */,
+				4231CCD6209F5C16001752EE /* View */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		4231CCD6209F5C16001752EE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4231CCD7209F5C24001752EE /* SearchViewLayer.swift */,
+				4231CCD9209F5C2F001752EE /* SearchView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4231CCE1209F5FEE001752EE /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				4231CCDF209F5DC2001752EE /* AppWireframe.swift */,
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		4231CCE2209F5FFA001752EE /* AppModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AppModule;
+			sourceTree = "<group>";
+		};
+		4231CCE9209F6EF5001752EE /* SearchTable */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SearchTable;
 			sourceTree = "<group>";
 		};
 		424B6F892098DC57008FF6FE /* Selection */ = {
@@ -199,7 +268,7 @@
 		428D5DEE2084DC34004237C1 /* DDPSASystem */ = {
 			isa = PBXGroup;
 			children = (
-				420067C0209F1C4F00C8A5AC /* CommonDataStorage */,
+				4231CCD2209F59F9001752EE /* CommonDataStorage */,
 				42F64B102098EF0500A7658A /* Extension */,
 				42247A1A2098D84800E2026B /* UI */,
 				428D5E052084DC70004237C1 /* Flow */,
@@ -244,6 +313,8 @@
 		428D5E042084DC68004237C1 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				4231CCE2209F5FFA001752EE /* AppModule */,
+				4231CCE1209F5FEE001752EE /* Wireframe */,
 				42F64B0D2098EA6800A7658A /* Router */,
 				428D5DEF2084DC34004237C1 /* AppDelegate.swift */,
 				424B6F872098DB55008FF6FE /* AppCoordinator.swift */,
@@ -254,7 +325,7 @@
 		428D5E052084DC70004237C1 /* Flow */ = {
 			isa = PBXGroup;
 			children = (
-				420067C3209F215900C8A5AC /* Search */,
+				4231CCD5209F5BF7001752EE /* Search */,
 				424B6F892098DC57008FF6FE /* Selection */,
 			);
 			path = Flow;
@@ -317,7 +388,7 @@
 			isa = PBXGroup;
 			children = (
 				428D5E202098BFEF004237C1 /* InstagramAPIInterface.swift */,
-				42F64B1B209908FE00A7658A /* InstagramAPIConfig.swift */,
+				420067CB209F3A1900C8A5AC /* Config */,
 				42E68DDE2098C8BA004BFEF4 /* Model */,
 			);
 			path = Instagram;
@@ -333,7 +404,9 @@
 		428D5E1F2098BFD2004237C1 /* VK */ = {
 			isa = PBXGroup;
 			children = (
-				420067C4209F358E00C8A5AC /* VKAPIInterface.swift */,
+				420067C9209F39B700C8A5AC /* VKAPIInterface.swift */,
+				420067CE209F3A3300C8A5AC /* Config */,
+				420067CF209F3A3D00C8A5AC /* Model */,
 			);
 			path = VK;
 			sourceTree = "<group>";
@@ -390,6 +463,7 @@
 			isa = PBXGroup;
 			children = (
 				42F64B112098EF1C00A7658A /* Extension+UIView.swift */,
+				4231CCD0209F54B0001752EE /* Extension+UIColor.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -503,10 +577,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DDPSASystem/Pods-DDPSASystem-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/VK-ios-sdk/VK_ios_sdk.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VK_ios_sdk.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -540,7 +616,9 @@
 			files = (
 				42E68DEC2098CB52004BFEF4 /* InstResolution.swift in Sources */,
 				42F64B1C209908FE00A7658A /* InstagramAPIConfig.swift in Sources */,
+				4231CCDE209F5C54001752EE /* SearchInteractor.swift in Sources */,
 				428D5E0E2084E67A004237C1 /* AvaibleStatus.swift in Sources */,
+				4231CCE0209F5DC2001752EE /* AppWireframe.swift in Sources */,
 				42247A172098D3A500E2026B /* REST.swift in Sources */,
 				428D5E142084EB3A004237C1 /* BLEManager.swift in Sources */,
 				42F64B0F2098EA8C00A7658A /* AppRouter.swift in Sources */,
@@ -548,12 +626,10 @@
 				424B6F882098DB55008FF6FE /* AppCoordinator.swift in Sources */,
 				42247A192098D41800E2026B /* RESTError.swift in Sources */,
 				424B6F8D2098DC8D008FF6FE /* SelectionPresenter.swift in Sources */,
-				420067C2209F1C7800C8A5AC /* CommonDataStorage.swift in Sources */,
 				42E68DF32098CC49004BFEF4 /* InstLocation.swift in Sources */,
 				428D5E102084E7A6004237C1 /* ConnectionType.swift in Sources */,
 				428D5E162084F30D004237C1 /* ClientCoordinator.swift in Sources */,
 				42247A1E2098D88100E2026B /* WebView.swift in Sources */,
-				420067C5209F358E00C8A5AC /* VKAPIInterface.swift in Sources */,
 				428D5E212098BFEF004237C1 /* InstagramAPIInterface.swift in Sources */,
 				42F64B122098EF1C00A7658A /* Extension+UIView.swift in Sources */,
 				42E68DE72098CA60004BFEF4 /* InstTag.swift in Sources */,
@@ -565,12 +641,18 @@
 				42F64B1A2098F6FA00A7658A /* SelectionInteractor.swift in Sources */,
 				424B6F8B2098DC81008FF6FE /* SelectionViewLayer.swift in Sources */,
 				428D5E1C2098BF3E004237C1 /* SocialAPIKit.swift in Sources */,
+				420067CA209F39B700C8A5AC /* VKAPIInterface.swift in Sources */,
 				428D5E0A2084E1F0004237C1 /* ChargeLevel.swift in Sources */,
-				420067BF209F0FE400C8A5AC /* RESTMethod.swift in Sources */,
 				428D5E072084DC85004237C1 /* Client.swift in Sources */,
+				4231CCDA209F5C2F001752EE /* SearchView.swift in Sources */,
+				4231CCD4209F5A0D001752EE /* CommonDataStorage.swift in Sources */,
 				42E68DF12098CC15004BFEF4 /* InstVideo.swift in Sources */,
+				420067CD209F3A2F00C8A5AC /* VKAPIConfig.swift in Sources */,
 				42E68DEE2098CB89004BFEF4 /* InstMediaType.swift in Sources */,
+				4231CCD8209F5C24001752EE /* SearchViewLayer.swift in Sources */,
 				42E68DE52098C904004BFEF4 /* InstImage.swift in Sources */,
+				4231CCDC209F5C41001752EE /* SearchPresenter.swift in Sources */,
+				4231CCD1209F54B0001752EE /* Extension+UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

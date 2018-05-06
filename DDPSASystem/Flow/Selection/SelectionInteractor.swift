@@ -10,16 +10,30 @@ import Foundation
 
 protocol SelectionInteractorProtocol {
     
-    func needAuthentication(authURL: @escaping (String) -> ())
+    func needInstagramAuthentication(authURL: @escaping (String) -> ())
+    func needVKAuthentication(successHandler: @escaping VKAPIAuthorizationStateHandle, errorHandler: @escaping DefaultHandle)
 }
 
 final class SelectionInteractor: SelectionInteractorProtocol {
     
-    private let api: InstagramAPIInterface? = SocialAPIKit().constractRequest(with: [.instagram])
+    private let instagramApi: InstagramAPIInterface? = SocialAPIKit().constractRequest(with: [.instagram])
+    private let vkApi: VKAPIInterface? = SocialAPIKit().constractRequest(with: [.vk])
     
-    func needAuthentication(authURL: @escaping (String) -> ()) {
-        api?.authentication(urlToRequest: { (url) in
+    func needInstagramAuthentication(authURL: @escaping (String) -> ()) {
+        instagramApi?.authentication(urlToRequest: { (url) in
             authURL(url)
         })
+    }
+    
+    func needVKAuthentication(successHandler: @escaping VKAPIAuthorizationStateHandle, errorHandler: @escaping DefaultHandle) {
+        vkApi?.auth()
+        vkApi?.onAuthStateChanged = { state, token in
+            switch state {
+            case .auth:
+                successHandler(state, token)
+            case .none:
+                errorHandler()
+            }
+        }
     }
 }

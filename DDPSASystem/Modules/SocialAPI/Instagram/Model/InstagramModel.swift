@@ -8,6 +8,9 @@
 
 import Foundation
 
+typealias APIIdentifier = String
+typealias ObjectsCount  = Int
+
 final class InstagramModel {
     
     var commentsCount: ObjectsCount?

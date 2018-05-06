@@ -8,18 +8,14 @@
 
 import Foundation
 
-enum SocialNetwork {
+typealias AccessToken = String
+
+enum SocialNetwork: String {
     
     case instagram
     case facebook
     case vk
 }
-
-typealias APIIdentifier = String
-typealias ObjectsCount  = Int
-
-typealias AccessToken = String
-typealias AccessTokenHandle = ((AccessToken, SocialNetwork) -> ())
 
 final class SocialAPIKit {
     
@@ -28,7 +24,7 @@ final class SocialAPIKit {
             switch network {
             case .instagram: return makeInstagramAPI() as? T
             case .facebook: break
-            case .vk: break
+            case .vk: return makeVKAPI() as? T
             }
         }
         return nil
@@ -39,6 +35,10 @@ private extension SocialAPIKit {
     
     func makeInstagramAPI() -> InstagramAPIInterface {
         return InstagramAPIInterface()
+    }
+    
+    func makeVKAPI() -> VKAPIInterface {
+        return VKAPIInterface()
     }
 }
 

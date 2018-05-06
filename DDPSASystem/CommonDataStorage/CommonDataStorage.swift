@@ -2,61 +2,30 @@
 //  CommonDataStorage.swift
 //  DDPSASystem
 //
-//  Created by Vladimir Malakhov on 06.05.18.
+//  Created by Vladimir Malakhov on 06.05.2018.
 //  Copyright © 2018 Vladimir Malakhov. All rights reserved.
 //
 
 import Foundation
 
-private enum StorageCell {
+private struct Keys {
     
-    case instagramAccessToken
-    case facebookAccessToken
-    case vkAccessToken
-    
-    var key: StorageKeyCell {
-        switch self {
-        case .instagramAccessToken:
-            return "instagramAccessToken"
-        case .facebookAccessToken:
-            return "facebookAccessToken"
-        case .vkAccessToken:
-            return "vkAccessToken"
-        }
-    }
+    static let accessTokenKey = "accessTokenKey"
 }
-
-typealias StorageKeyCell = String
 
 final class CommonDataStorage {
     
     private let storage = UserDefaults.standard
     
-    func saveAccessToken(with key: SocialNetwork, data: String) {
-        switch key {
-        case .instagram: save(data: data, with: StorageCell.instagramAccessToken.key)
-        case .facebook: save(data: data, with: StorageCell.facebookAccessToken.key)
-        case .vk: save(data: data, with: StorageCell.vkAccessToken.key)
-        }
+    func saveAccessToken(with network: SocialNetwork, token: AccessToken) {
+        storage.set(token, forKey: network.rawValue + Keys.accessTokenKey)
     }
     
-    func readAccessToken(with key: SocialNetwork) -> String? {
-        switch key {
-        case .instagram: return read(with: StorageCell.instagramAccessToken.key)
-        case .facebook: return read(with: StorageCell.facebookAccessToken.key)
-        case .vk: return read(with: StorageCell.vkAccessToken.key)
-        }
+    func getAccessToken(with network: SocialNetwork) -> String? {
+        return storage.string(forKey: network.rawValue + Keys.accessTokenKey)
     }
 }
 
 private extension CommonDataStorage {
     
-    func save(data: String, with key: StorageKeyCell) {
-        storage.set(data, forKey: key)
-    }
-    
-    func read(with key: StorageKeyCell) -> String? {
-        return storage.string(forKey: key)
-    }
 }
-

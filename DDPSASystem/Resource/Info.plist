@@ -62,5 +62,16 @@
         <string>vk-share</string>
         <string>vkauthorize</string>
     </array>
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleURLName</key>
+            <string>DDPSASystem</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>vk6470766</string>
+            </array>
+        </dict>
+    </array>
 </dict>
 </plist>

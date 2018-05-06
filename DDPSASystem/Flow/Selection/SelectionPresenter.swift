@@ -17,6 +17,7 @@ final class SelectionPresenter: SelectionPresenterProtocol {
     
     var viewLayer: SelectionViewLayerProtocol?
     var interactor: SelectionInteractorProtocol?
+    var wireframe: AppWireframeProtocol?
     
     func start() {
         
@@ -25,33 +26,55 @@ final class SelectionPresenter: SelectionPresenterProtocol {
     
     func subscriptForEvents() {
         
-        viewLayer?.onSocialButtonTapped = selectNetwork
-        viewLayer?.onGetSocialAccessToken = saveNetworkAccessToken
-        viewLayer?.onReadyToRouteNext = routeToSearch
+        viewLayer?.onSocialButtonTapped = select
     }
 }
 
 private extension SelectionPresenter {
     
-    func selectNetwork(_ type: SocialButtonType) {
+    func select(_ type: SocialButtonType) {
         switch type {
-        case .instagram: interactor?.needAuthentication(authURL: { [weak self] (url) in
-            self?.viewLayer?.loadWeb(with: url)
-        })
-        case .facebook: break
-        case .vk: break
+        case .instagram: instagramAuth()
+        case .facebook: facebookAuth()
+        case .vk: vkAuth()
         }
     }
     
-    func saveNetworkAccessToken(_ token: AccessToken, _ social: SocialNetwork) {
-        let commonStorage = CommonDataStorage()
-        commonStorage.saveAccessToken(with: social, data: token)
+    func instagramAuth() {
+        interactor?.needInstagramAuthentication(authURL: { [weak self] (url) in
+            self?.viewLayer?.loadWeb(with: url)
+        })
     }
     
-    func routeToSearch() {
+    func facebookAuth() {
         
-        //
+    }
+    
+    func vkAuth() {
+        interactor?.needVKAuthentication(successHandler: { [weak self] (state, token) in
+            
+            guard state == .auth, let token = token else {
+                return
+            }
+            
+            self?.saveToken(with: .vk, token: token.accessToken)
+            self?.routeTo()
+            
+        }, errorHandler: {
+            print("Error: Unable to auth user. Try again")
+        })
+    }
+}
+
+private extension SelectionPresenter {
+    
+    func saveToken(with netowork: SocialNetwork, token: String) {
         
-        
+        let commonStorage = CommonDataStorage()
+        commonStorage.saveAccessToken(with: netowork, token: token)
+    }
+    
+    func routeTo() {
+        wireframe?.buildFlow(with: .search)
     }
 }
