@@ -14,6 +14,11 @@ protocol SearchInteractorProtocol {
 
 final class SearchInteractor: SearchInteractorProtocol {
     
+    private let vkApi: VKAPIInterface? = SocialAPIKit().constractRequest(with: [.vk])
+    
+    func search(with predict: String) {
+        
+    }
 }
 
 

@@ -19,6 +19,10 @@
 		4231CCDC209F5C41001752EE /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231CCDB209F5C41001752EE /* SearchPresenter.swift */; };
 		4231CCDE209F5C54001752EE /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231CCDD209F5C54001752EE /* SearchInteractor.swift */; };
 		4231CCE0209F5DC2001752EE /* AppWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231CCDF209F5DC2001752EE /* AppWireframe.swift */; };
+		4231CCEB20A0F12D001752EE /* SearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231CCEA20A0F12D001752EE /* SearchTable.swift */; };
+		4231CCED20A0F20F001752EE /* SearchTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231CCEC20A0F20F001752EE /* SearchTableCell.swift */; };
+		4231CCEF20A0F242001752EE /* VKViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231CCEE20A0F242001752EE /* VKViewModel.swift */; };
+		4231CCF220A0FCCD001752EE /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231CCF120A0FCCD001752EE /* SearchBar.swift */; };
 		424B6F882098DB55008FF6FE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424B6F872098DB55008FF6FE /* AppCoordinator.swift */; };
 		424B6F8B2098DC81008FF6FE /* SelectionViewLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424B6F8A2098DC81008FF6FE /* SelectionViewLayer.swift */; };
 		424B6F8D2098DC8D008FF6FE /* SelectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424B6F8C2098DC8D008FF6FE /* SelectionPresenter.swift */; };
@@ -64,6 +68,10 @@
 		4231CCDB209F5C41001752EE /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
 		4231CCDD209F5C54001752EE /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
 		4231CCDF209F5DC2001752EE /* AppWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWireframe.swift; sourceTree = "<group>"; };
+		4231CCEA20A0F12D001752EE /* SearchTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTable.swift; sourceTree = "<group>"; };
+		4231CCEC20A0F20F001752EE /* SearchTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableCell.swift; sourceTree = "<group>"; };
+		4231CCEE20A0F242001752EE /* VKViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKViewModel.swift; sourceTree = "<group>"; };
+		4231CCF120A0FCCD001752EE /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		424B6F872098DB55008FF6FE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		424B6F8A2098DC81008FF6FE /* SelectionViewLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewLayer.swift; sourceTree = "<group>"; };
 		424B6F8C2098DC8D008FF6FE /* SelectionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionPresenter.swift; sourceTree = "<group>"; };
@@ -140,6 +148,7 @@
 		420067CF209F3A3D00C8A5AC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4231CCEE20A0F242001752EE /* VKViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -164,6 +173,7 @@
 		42247A1B2098D85400E2026B /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				4231CCF020A0FCBF001752EE /* SearchBar */,
 				4231CCE9209F6EF5001752EE /* SearchTable */,
 				42F64B132098F09300A7658A /* SocialButton */,
 				42247A1C2098D86B00E2026B /* WebView */,
@@ -224,8 +234,18 @@
 		4231CCE9209F6EF5001752EE /* SearchTable */ = {
 			isa = PBXGroup;
 			children = (
+				4231CCEA20A0F12D001752EE /* SearchTable.swift */,
+				4231CCEC20A0F20F001752EE /* SearchTableCell.swift */,
 			);
 			path = SearchTable;
+			sourceTree = "<group>";
+		};
+		4231CCF020A0FCBF001752EE /* SearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				4231CCF120A0FCCD001752EE /* SearchBar.swift */,
+			);
+			path = SearchBar;
 			sourceTree = "<group>";
 		};
 		424B6F892098DC57008FF6FE /* Selection */ = {
@@ -632,10 +652,12 @@
 				42247A1E2098D88100E2026B /* WebView.swift in Sources */,
 				428D5E212098BFEF004237C1 /* InstagramAPIInterface.swift in Sources */,
 				42F64B122098EF1C00A7658A /* Extension+UIView.swift in Sources */,
+				4231CCEB20A0F12D001752EE /* SearchTable.swift in Sources */,
 				42E68DE72098CA60004BFEF4 /* InstTag.swift in Sources */,
 				424B6F902098DD47008FF6FE /* SelectionView.swift in Sources */,
 				42E68DE22098C8E3004BFEF4 /* InstCaption.swift in Sources */,
 				428D5E232098C28C004237C1 /* InstagramModel.swift in Sources */,
+				4231CCED20A0F20F001752EE /* SearchTableCell.swift in Sources */,
 				42E68DE02098C8CD004BFEF4 /* InstUser.swift in Sources */,
 				42F64B152098F0A700A7658A /* SocialButton.swift in Sources */,
 				42F64B1A2098F6FA00A7658A /* SelectionInteractor.swift in Sources */,
@@ -649,7 +671,9 @@
 				42E68DF12098CC15004BFEF4 /* InstVideo.swift in Sources */,
 				420067CD209F3A2F00C8A5AC /* VKAPIConfig.swift in Sources */,
 				42E68DEE2098CB89004BFEF4 /* InstMediaType.swift in Sources */,
+				4231CCEF20A0F242001752EE /* VKViewModel.swift in Sources */,
 				4231CCD8209F5C24001752EE /* SearchViewLayer.swift in Sources */,
+				4231CCF220A0FCCD001752EE /* SearchBar.swift in Sources */,
 				42E68DE52098C904004BFEF4 /* InstImage.swift in Sources */,
 				4231CCDC209F5C41001752EE /* SearchPresenter.swift in Sources */,
 				4231CCD1209F54B0001752EE /* Extension+UIColor.swift in Sources */,

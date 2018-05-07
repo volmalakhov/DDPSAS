@@ -27,4 +27,8 @@ final class SearchPresenter: SelectionPresenterProtocol {
 
 private extension SelectionPresenter {
     
+    func search(with predict: String) {
+        
+        
+    }
 }

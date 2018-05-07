@@ -11,12 +11,15 @@ import SnapKit
 
 final class SearchView: UIView {
     
-    
+    private let table: SearchTable = {
+        let table = SearchTable()
+        return table
+    }()
     
     init() {
         super.init(frame: .zero)
         applyStyle()
-        construct()
+        applyLayout()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -30,8 +33,15 @@ private extension SearchView {
         backgroundColor = .white
     }
     
-    func construct() {
+    func applyLayout() {
         
+        addSubview(table)
         
+        table.snp.makeConstraints { (make) in
+            make.top.equalToSuperview()
+            make.bottom.equalToSuperview()
+            make.left.equalToSuperview()
+            make.right.equalToSuperview()
+        }
     }
 }
