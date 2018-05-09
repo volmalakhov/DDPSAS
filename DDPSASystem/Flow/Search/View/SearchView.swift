@@ -9,9 +9,22 @@
 import UIKit
 import SnapKit
 
+private struct SizeConstans {
+    
+    static let topOffset = 22.0
+    static let barHeight = 40.0
+}
+
+private typealias S = SizeConstans
+
 final class SearchView: UIView {
     
-    private let table: SearchTable = {
+    let searchBar: SearchBar = {
+        let bar = SearchBar()
+        return bar
+    }()
+    
+    let table: SearchTable = {
         let table = SearchTable()
         return table
     }()
@@ -35,13 +48,19 @@ private extension SearchView {
     
     func applyLayout() {
         
-        addSubview(table)
+        let allSubviews = [searchBar, table]
+        addMutipleSubviews(allSubviews)
+        
+        searchBar.snp.makeConstraints { (make) in
+            make.top.equalToSuperview().offset(S.topOffset)
+            make.left.right.equalToSuperview()
+            make.height.equalTo(S.barHeight)
+        }
         
         table.snp.makeConstraints { (make) in
-            make.top.equalToSuperview()
+            make.top.equalTo(searchBar.snp.bottom)
             make.bottom.equalToSuperview()
-            make.left.equalToSuperview()
-            make.right.equalToSuperview()
+            make.left.right.equalToSuperview()
         }
     }
 }

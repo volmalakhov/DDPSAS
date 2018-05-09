@@ -8,15 +8,29 @@
 
 import Foundation
 
+typealias DefaultHandler = (() -> ())
+
 protocol SearchInteractorProtocol {
     
+    func search(with predict: String, viewModelsHandler: @escaping (([VKViewModel]) -> ()), error: @escaping DefaultHandler)
 }
 
 final class SearchInteractor: SearchInteractorProtocol {
     
-    private let vkApi: VKAPIInterface? = SocialAPIKit().constractRequest(with: [.vk])
+    private let vkApi: VKAPIInterfaceProtocol? = SocialAPIKit().constractRequest(with: [.vk])
     
-    func search(with predict: String) {
+    func search(with predict: String, viewModelsHandler: @escaping (([VKViewModel]) -> ()), error: @escaping DefaultHandler) {
+        vkApi?.searchPages(with: predict, success: { (response) in
+            let dataWorker = VKViewModelDataWorker()
+            dataWorker.work(with: response, viewModelContainerHandler: { (viewModels) in
+                viewModelsHandler(viewModels)
+            })
+        }, error: { (er) in
+            error()
+        })
+    }
+    
+    func fetchPage(with id: SocialID) {
         
     }
 }

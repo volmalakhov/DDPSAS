@@ -8,31 +8,58 @@
 
 import UIKit
 
+typealias OnPageSelectedHandler = ((SocialID) -> ())
+
 protocol SearchViewLayerProtocol {
     
+    var onSearchedTextChanged: SearchTextChangedHandler? { get set }
+    var onPageSelected: OnPageSelectedHandler? { get set }
     
+    func update(with newViewModels: [VKViewModel])
 }
 
 final class SearchViewLayer: UIViewController {
     
-    private var customView: SearchView?
+    var onSearchedTextChanged: SearchTextChangedHandler?
+    var onPageSelected: OnPageSelectedHandler?
+    
+    private var searchView: SearchView?
     
     override func loadView() {
         super.loadView()
         
-        customView = SearchView()
-        view = customView
+        searchView = SearchView()
+        view = searchView
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        subscriptForEvents()
     }
 }
 
 extension SearchViewLayer: SearchViewLayerProtocol {
     
+    func update(with newViewModels: [VKViewModel]) {
+        searchView?.table.update(with: newViewModels)
+    }
 }
 
 private extension SearchViewLayer {
-    
+
+    func subscriptForEvents() {
+        
+        searchView?.searchBar.onSearchTextChanged = { [weak self] searchedText in
+            self?.onSearchedTextChanged?(searchedText)
+        }
+        
+        searchView?.table.onSelectEntry = { [weak self] entry in
+            self?.onPageSelected?(entry)
+            // Route к следующему интерактору (модулю) Proccesing
+            
+            // 1. Запрашиваем кол - во фолловеров у пользователя ? = 1000
+            // 2. Определяем максимальную длину
+        }
+    }
 }

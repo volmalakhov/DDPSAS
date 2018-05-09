@@ -16,10 +16,14 @@ enum VKAPIAuthorizationState {
 }
 
 typealias VKAPIAuthorizationStateHandle = ((VKAPIAuthorizationState, VKAccessToken?) -> ())
+typealias VKAPISuccessHanlder = ((Any?) -> ())
+typealias VKAPIErrorHandler = ((Error) -> ())
 
 protocol VKAPIInterfaceProtocol {
     
     func auth()
+    
+    func searchPages(with predict: String, success: @escaping VKAPISuccessHanlder, error: @escaping VKAPIErrorHandler)
 }
 
 final class VKAPIInterface: NSObject {
@@ -29,26 +33,68 @@ final class VKAPIInterface: NSObject {
     override init() {
         super.init()
         
+        initSDK()
+        //wakeUpSession()
+    }
+    
+    private func initSDK() {
+        
         let vkInstanse = VKSdk.initialize(withAppId: VKAPIConfig.appID)
         vkInstanse?.uiDelegate = self
         vkInstanse?.register(self)
+    }
+    
+    private func wakeUpSession() {
+
+        VKSdk.wakeUpSession(VKAPIConfig.scopePermissions) { (state, error) in
+            
+            guard error != nil else {
+                print("Error: Unable to check session")
+                return
+            }
+            
+            if state == .authorized {
+                self.onAuthStateChanged?(.auth, nil)
+            }
+        }
     }
 }
 
 extension VKAPIInterface: VKAPIInterfaceProtocol {
 
     func auth() {
-        
-        let scopePermison = [VK_API_USER_ID, ""]
-        VKSdk.authorize(scopePermison)
+        VKSdk.authorize(VKAPIConfig.scopePermissions)
     }
     
-    func searchPages(with predict: String) {
+    func searchPages(with predict: String, success: @escaping VKAPISuccessHanlder, error: @escaping VKAPIErrorHandler) {
+        
+        let request = VKRequest(method: VKAPIRequest.search.method, parameters: VKAPIRequest.search.params)
+        request?.addExtraParameters(["q" : predict])
+        request?.access()
+        request?.execute(resultBlock: { (response) in
+            success(response?.json)
+        }, errorBlock: { (er) in
+            guard let er = er else {
+                return
+            }
+            error(er)
+        })
+    }
+    
+    func fetchPageFollowersCount(pageID: SocialID) {
         
     }
     
-    func fetchPageFollowers(pageID: String) {
+    func fetchPageFollowersPages(pageID: SocialID) {
         
+        let request = VKRequest(method: VKAPIRequest.followers.method, parameters: VKAPIRequest.followers.params)
+        request?.addExtraParameters(["user_id" : pageID])
+        request?.access()
+        request?.execute(resultBlock: { (response) in
+            
+        }, errorBlock: { (error) in
+            
+        })
     }
     
     func fetchPage() {

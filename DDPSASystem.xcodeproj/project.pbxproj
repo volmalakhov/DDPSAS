@@ -23,6 +23,10 @@
 		4231CCED20A0F20F001752EE /* SearchTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231CCEC20A0F20F001752EE /* SearchTableCell.swift */; };
 		4231CCEF20A0F242001752EE /* VKViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231CCEE20A0F242001752EE /* VKViewModel.swift */; };
 		4231CCF220A0FCCD001752EE /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231CCF120A0FCCD001752EE /* SearchBar.swift */; };
+		4231CCF420A33914001752EE /* VKAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231CCF320A33914001752EE /* VKAPIRequest.swift */; };
+		4231CCF620A36ABE001752EE /* VKAPIPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231CCF520A36ABE001752EE /* VKAPIPermissions.swift */; };
+		4231CCF820A36B44001752EE /* VKAccessRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231CCF720A36B44001752EE /* VKAccessRequest.swift */; };
+		4231CCFB20A36DED001752EE /* VKViewModelDataWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231CCFA20A36DED001752EE /* VKViewModelDataWorker.swift */; };
 		424B6F882098DB55008FF6FE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424B6F872098DB55008FF6FE /* AppCoordinator.swift */; };
 		424B6F8B2098DC81008FF6FE /* SelectionViewLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424B6F8A2098DC81008FF6FE /* SelectionViewLayer.swift */; };
 		424B6F8D2098DC8D008FF6FE /* SelectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424B6F8C2098DC8D008FF6FE /* SelectionPresenter.swift */; };
@@ -72,6 +76,10 @@
 		4231CCEC20A0F20F001752EE /* SearchTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableCell.swift; sourceTree = "<group>"; };
 		4231CCEE20A0F242001752EE /* VKViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKViewModel.swift; sourceTree = "<group>"; };
 		4231CCF120A0FCCD001752EE /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		4231CCF320A33914001752EE /* VKAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKAPIRequest.swift; sourceTree = "<group>"; };
+		4231CCF520A36ABE001752EE /* VKAPIPermissions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKAPIPermissions.swift; sourceTree = "<group>"; };
+		4231CCF720A36B44001752EE /* VKAccessRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKAccessRequest.swift; sourceTree = "<group>"; };
+		4231CCFA20A36DED001752EE /* VKViewModelDataWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKViewModelDataWorker.swift; sourceTree = "<group>"; };
 		424B6F872098DB55008FF6FE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		424B6F8A2098DC81008FF6FE /* SelectionViewLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewLayer.swift; sourceTree = "<group>"; };
 		424B6F8C2098DC8D008FF6FE /* SelectionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionPresenter.swift; sourceTree = "<group>"; };
@@ -137,12 +145,15 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
-		420067CE209F3A3300C8A5AC /* Config */ = {
+		420067CE209F3A3300C8A5AC /* Source */ = {
 			isa = PBXGroup;
 			children = (
 				420067CC209F3A2F00C8A5AC /* VKAPIConfig.swift */,
+				4231CCF320A33914001752EE /* VKAPIRequest.swift */,
+				4231CCF520A36ABE001752EE /* VKAPIPermissions.swift */,
+				4231CCF720A36B44001752EE /* VKAccessRequest.swift */,
 			);
-			path = Config;
+			path = Source;
 			sourceTree = "<group>";
 		};
 		420067CF209F3A3D00C8A5AC /* Model */ = {
@@ -248,6 +259,38 @@
 			path = SearchBar;
 			sourceTree = "<group>";
 		};
+		4231CCF920A36DA6001752EE /* DataWorker */ = {
+			isa = PBXGroup;
+			children = (
+				4231CCFA20A36DED001752EE /* VKViewModelDataWorker.swift */,
+			);
+			path = DataWorker;
+			sourceTree = "<group>";
+		};
+		4231CCFC20A38A38001752EE /* Proccesing */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Proccesing;
+			sourceTree = "<group>";
+		};
+		4231CCFD20A38A97001752EE /* DDPS */ = {
+			isa = PBXGroup;
+			children = (
+				4231CCFE20A38AB8001752EE /* Queue */,
+				428D5E122084EADD004237C1 /* Communication */,
+				428D5E022084DC52004237C1 /* Clinet */,
+			);
+			path = DDPS;
+			sourceTree = "<group>";
+		};
+		4231CCFE20A38AB8001752EE /* Queue */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Queue;
+			sourceTree = "<group>";
+		};
 		424B6F892098DC57008FF6FE /* Selection */ = {
 			isa = PBXGroup;
 			children = (
@@ -288,6 +331,7 @@
 		428D5DEE2084DC34004237C1 /* DDPSASystem */ = {
 			isa = PBXGroup;
 			children = (
+				4231CCF920A36DA6001752EE /* DataWorker */,
 				4231CCD2209F59F9001752EE /* CommonDataStorage */,
 				42F64B102098EF0500A7658A /* Extension */,
 				42247A1A2098D84800E2026B /* UI */,
@@ -303,9 +347,8 @@
 		428D5E012084DC42004237C1 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				4231CCFD20A38A97001752EE /* DDPS */,
 				428D5E1A2098BF25004237C1 /* SocialAPI */,
-				428D5E122084EADD004237C1 /* Communication */,
-				428D5E022084DC52004237C1 /* Clinet */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -345,6 +388,7 @@
 		428D5E052084DC70004237C1 /* Flow */ = {
 			isa = PBXGroup;
 			children = (
+				4231CCFC20A38A38001752EE /* Proccesing */,
 				4231CCD5209F5BF7001752EE /* Search */,
 				424B6F892098DC57008FF6FE /* Selection */,
 			);
@@ -425,7 +469,7 @@
 			isa = PBXGroup;
 			children = (
 				420067C9209F39B700C8A5AC /* VKAPIInterface.swift */,
-				420067CE209F3A3300C8A5AC /* Config */,
+				420067CE209F3A3300C8A5AC /* Source */,
 				420067CF209F3A3D00C8A5AC /* Model */,
 			);
 			path = VK;
@@ -654,15 +698,19 @@
 				42F64B122098EF1C00A7658A /* Extension+UIView.swift in Sources */,
 				4231CCEB20A0F12D001752EE /* SearchTable.swift in Sources */,
 				42E68DE72098CA60004BFEF4 /* InstTag.swift in Sources */,
+				4231CCF820A36B44001752EE /* VKAccessRequest.swift in Sources */,
 				424B6F902098DD47008FF6FE /* SelectionView.swift in Sources */,
+				4231CCF620A36ABE001752EE /* VKAPIPermissions.swift in Sources */,
 				42E68DE22098C8E3004BFEF4 /* InstCaption.swift in Sources */,
 				428D5E232098C28C004237C1 /* InstagramModel.swift in Sources */,
 				4231CCED20A0F20F001752EE /* SearchTableCell.swift in Sources */,
+				4231CCFB20A36DED001752EE /* VKViewModelDataWorker.swift in Sources */,
 				42E68DE02098C8CD004BFEF4 /* InstUser.swift in Sources */,
 				42F64B152098F0A700A7658A /* SocialButton.swift in Sources */,
 				42F64B1A2098F6FA00A7658A /* SelectionInteractor.swift in Sources */,
 				424B6F8B2098DC81008FF6FE /* SelectionViewLayer.swift in Sources */,
 				428D5E1C2098BF3E004237C1 /* SocialAPIKit.swift in Sources */,
+				4231CCF420A33914001752EE /* VKAPIRequest.swift in Sources */,
 				420067CA209F39B700C8A5AC /* VKAPIInterface.swift in Sources */,
 				428D5E0A2084E1F0004237C1 /* ChargeLevel.swift in Sources */,
 				428D5E072084DC85004237C1 /* Client.swift in Sources */,

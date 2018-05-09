@@ -12,5 +12,11 @@ struct VKViewModel {
     
     var urlImage: URL?
     var name: String?
-    var id: SocialID?
+    var description: String?
+    
+    var id: SocialID
+    
+    init(id: SocialID) {
+        self.id = id
+    }
 }

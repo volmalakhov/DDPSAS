@@ -9,7 +9,7 @@
 import Foundation
 
 typealias AccessToken = String
-typealias SocialID = String
+typealias SocialID = Int
 
 enum SocialNetwork: String {
     

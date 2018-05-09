@@ -39,11 +39,12 @@ private extension SearchTable {
         dataSource = self
         
         registerCell()
+        applyStyle()
     }
     
     func registerCell() {
         register(SearchTableCell.self,
-                 forCellReuseIdentifier: SearchTableCell().ident)
+                 forCellReuseIdentifier: SearchTableCell().reuseIdentifier)
     }
     
     func applyStyle() {
@@ -55,10 +56,11 @@ extension SearchTable: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        guard let data = data, let currentID = data[indexPath.row].id else {
+        guard let data = data else {
             return
         }
         
+        let currentID = data[indexPath.row].id
         onSelectEntry?(currentID)
     }
 }
@@ -71,7 +73,7 @@ extension SearchTable: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = dequeueReusableCell(withIdentifier: SearchTableCell().ident, for: indexPath) as? SearchTableCell else {
+        guard let cell = dequeueReusableCell(withIdentifier: SearchTableCell().reuseIdentifier, for: indexPath) as? SearchTableCell else {
             return UITableViewCell()
         }
     
@@ -88,7 +90,6 @@ private extension SearchTable {
         }
         
         let currentViewModel = data[row]
-        cell.icon.backgroundColor = .red
         cell.nameLabel.text = currentViewModel.name
         
         return cell

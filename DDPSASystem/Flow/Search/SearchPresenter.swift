@@ -19,15 +19,38 @@ final class SearchPresenter: SelectionPresenterProtocol {
     var viewLayer: SearchViewLayer?
     var wireframe: AppWireframeProtocol?
     
+    private var searchRequestWorkItem: DispatchWorkItem?
+    
     func start() {
         
-        print("START")
+        subscriptForViewEvents()
+    }
+    
+    func subscriptForViewEvents() {
+        
+        viewLayer?.onSearchedTextChanged = search
+        viewLayer?.onPageSelected = getPageFollowers
     }
 }
 
-private extension SelectionPresenter {
+private extension SearchPresenter {
     
-    func search(with predict: String) {
+    func search(_ searchedText: String) {
+        
+        searchRequestWorkItem?.cancel()
+        let localRequestWorkItem = DispatchWorkItem { [weak self] in
+            self?.interactor?.search(with: searchedText, viewModelsHandler: { (viewModelds) in
+                self?.viewLayer?.update(with: viewModelds)
+            }, error: {
+                // error
+            })
+        }
+        searchRequestWorkItem = localRequestWorkItem
+        DispatchQueue.main.asyncAfter(deadline: .now() +
+            .milliseconds(250), execute: localRequestWorkItem)
+    }
+    
+    func getPageFollowers(_ id: SocialID) {
         
         
     }
