@@ -56,10 +56,6 @@ private extension SearchViewLayer {
         
         searchView?.table.onSelectEntry = { [weak self] entry in
             self?.onPageSelected?(entry)
-            // Route к следующему интерактору (модулю) Proccesing
-            
-            // 1. Запрашиваем кол - во фолловеров у пользователя ? = 1000
-            // 2. Определяем максимальную длину
         }
     }
 }

@@ -24,6 +24,7 @@ protocol VKAPIInterfaceProtocol {
     func auth()
     
     func searchPages(with predict: String, success: @escaping VKAPISuccessHanlder, error: @escaping VKAPIErrorHandler)
+    func fetchPageFollowersCount(pageID: SocialID, success: @escaping VKAPISuccessHanlder, error: @escaping VKAPIErrorHandler)
 }
 
 final class VKAPIInterface: NSObject {
@@ -81,8 +82,19 @@ extension VKAPIInterface: VKAPIInterfaceProtocol {
         })
     }
     
-    func fetchPageFollowersCount(pageID: SocialID) {
+    func fetchPageFollowersCount(pageID: SocialID, success: @escaping VKAPISuccessHanlder, error: @escaping VKAPIErrorHandler) {
         
+       let request = VKRequest(method: VKAPIRequest.countFollowers.method, parameters: VKAPIRequest.countFollowers.params)
+        request?.addExtraParameters(["user_ids" : pageID])
+        request?.access()
+        request?.execute(resultBlock: { (response) in
+            success(response?.json)
+        }, errorBlock: { (er) in
+            guard let er = er else {
+                return
+            }
+            error(er)
+        })
     }
     
     func fetchPageFollowersPages(pageID: SocialID) {

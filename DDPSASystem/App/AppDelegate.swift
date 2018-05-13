@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         let appCoordinator = AppCoordinator()
+        appCoordinator.container = DDPSDIContainer()
         appCoordinator.appRouter = AppRouter(window: window)
         appCoordinator.start(with: .selection)
 

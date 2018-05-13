@@ -13,6 +13,7 @@ typealias DefaultHandler = (() -> ())
 protocol SearchInteractorProtocol {
     
     func search(with predict: String, viewModelsHandler: @escaping (([VKViewModel]) -> ()), error: @escaping DefaultHandler)
+    func fetchCount(with id: SocialID, counterHandler: @escaping ((VKPageCountModel) -> ()), error: @escaping DefaultHandler)
 }
 
 final class SearchInteractor: SearchInteractorProtocol {
@@ -30,8 +31,15 @@ final class SearchInteractor: SearchInteractorProtocol {
         })
     }
     
-    func fetchPage(with id: SocialID) {
-        
+    func fetchCount(with id: SocialID, counterHandler: @escaping ((VKPageCountModel) -> ()), error: @escaping DefaultHandler) {
+        vkApi?.fetchPageFollowersCount(pageID: id, success: { (response) in
+            let dataWorker = VKPageCountDataWorker()
+            dataWorker.work(with: response, counterHandler: { (counterModel) in
+                counterHandler(counterModel)
+            })
+        }, error: { (er) in
+            error()
+        })
     }
 }
 

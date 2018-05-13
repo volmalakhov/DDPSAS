@@ -52,6 +52,22 @@ private extension SearchPresenter {
     
     func getPageFollowers(_ id: SocialID) {
         
+        interactor?.fetchCount(with: id, counterHandler: { [weak self] (pageCounterModel) in
+            var modelCopy = pageCounterModel
+            modelCopy.id = id
+            self?.toProcessingData(with: modelCopy)
+        }, error: {
+            // error
+        })
+    }
+}
+
+private extension SearchPresenter {
+    
+    func toProcessingData(with model: VKPageCountModel) {
         
+        let socialProxy = DDPSSocialProxy(counter: model.count, id: model.id)
+        wireframe?.container?.socialProxy = socialProxy
+        wireframe?.buildFlow(with: .proccesing)
     }
 }

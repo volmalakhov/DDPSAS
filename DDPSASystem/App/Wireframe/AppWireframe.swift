@@ -11,10 +11,12 @@ import Foundation
 protocol AppWireframeProtocol {
     
     func buildFlow(with appState: AppState)
+    var container: DDPSDIContainer? { get set }
 }
 
 final class AppWireframe: AppWireframeProtocol {
     
+    var container: DDPSDIContainer?
     var appRouter: AppRouterProtocol?
     
     func buildFlow(with appState: AppState) {
@@ -25,6 +27,8 @@ final class AppWireframe: AppWireframeProtocol {
             buildSelection()
         case .search:
             buildSearch()
+        case .proccesing:
+            buildProccesing()
         }
     }
 }
@@ -55,6 +59,19 @@ private extension AppWireframe {
         presenter.viewLayer = viewLayer
         presenter.interactor = interactor
         presenter.wireframe = self
+        presenter.start()
+        appRouter?.setRoot(controller: viewLayer)
+    }
+    
+    func buildProccesing() {
+        
+        let viewLayer = ProccesingViewLayer()
+        guard let container = container else { return }
+        let presenter = ProcessingPresenter(container: container)
+        let interactor = ProcessingInteractor()
+        presenter.viewLayer = viewLayer
+        presenter.interactor = interactor
+        
         presenter.start()
         appRouter?.setRoot(controller: viewLayer)
     }

@@ -27,6 +27,20 @@
 		4231CCF620A36ABE001752EE /* VKAPIPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231CCF520A36ABE001752EE /* VKAPIPermissions.swift */; };
 		4231CCF820A36B44001752EE /* VKAccessRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231CCF720A36B44001752EE /* VKAccessRequest.swift */; };
 		4231CCFB20A36DED001752EE /* VKViewModelDataWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231CCFA20A36DED001752EE /* VKViewModelDataWorker.swift */; };
+		4231CD0120A86AFD001752EE /* ProcessingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231CD0020A86AFC001752EE /* ProcessingView.swift */; };
+		4231CD0320A86B25001752EE /* ProcessingViewLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231CD0220A86B25001752EE /* ProcessingViewLayer.swift */; };
+		4231CD0520A86B3F001752EE /* ProcessingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231CD0420A86B3F001752EE /* ProcessingPresenter.swift */; };
+		4231CD0720A86B55001752EE /* ProcessingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231CD0620A86B55001752EE /* ProcessingInteractor.swift */; };
+		4231CD0920A872E1001752EE /* VKPageCountDataWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231CD0820A872E1001752EE /* VKPageCountDataWorker.swift */; };
+		4231CD0B20A87334001752EE /* VKPageCountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231CD0A20A87334001752EE /* VKPageCountModel.swift */; };
+		4231CD0E20A87776001752EE /* DDPSDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231CD0D20A87776001752EE /* DDPSDIContainer.swift */; };
+		4231CD1120A87805001752EE /* DDPSSocialProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231CD1020A87805001752EE /* DDPSSocialProxy.swift */; };
+		4231CD1320A87CB5001752EE /* DDPSMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231CD1220A87CB5001752EE /* DDPSMain.swift */; };
+		4231CD1520A87D04001752EE /* DDPSQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231CD1420A87D04001752EE /* DDPSQueue.swift */; };
+		4231CD1820A87D5F001752EE /* DDPSPack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231CD1720A87D5F001752EE /* DDPSPack.swift */; };
+		4231CD2020A8983E001752EE /* DDPSConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231CD1F20A8983E001752EE /* DDPSConfig.swift */; };
+		4231CD2220A898DB001752EE /* DDPSPackFabric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231CD2120A898DB001752EE /* DDPSPackFabric.swift */; };
+		4231CD2520A8A019001752EE /* DDPSConfigAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231CD2420A8A019001752EE /* DDPSConfigAdapter.swift */; };
 		424B6F882098DB55008FF6FE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424B6F872098DB55008FF6FE /* AppCoordinator.swift */; };
 		424B6F8B2098DC81008FF6FE /* SelectionViewLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424B6F8A2098DC81008FF6FE /* SelectionViewLayer.swift */; };
 		424B6F8D2098DC8D008FF6FE /* SelectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424B6F8C2098DC8D008FF6FE /* SelectionPresenter.swift */; };
@@ -80,6 +94,20 @@
 		4231CCF520A36ABE001752EE /* VKAPIPermissions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKAPIPermissions.swift; sourceTree = "<group>"; };
 		4231CCF720A36B44001752EE /* VKAccessRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKAccessRequest.swift; sourceTree = "<group>"; };
 		4231CCFA20A36DED001752EE /* VKViewModelDataWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKViewModelDataWorker.swift; sourceTree = "<group>"; };
+		4231CD0020A86AFC001752EE /* ProcessingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessingView.swift; sourceTree = "<group>"; };
+		4231CD0220A86B25001752EE /* ProcessingViewLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessingViewLayer.swift; sourceTree = "<group>"; };
+		4231CD0420A86B3F001752EE /* ProcessingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessingPresenter.swift; sourceTree = "<group>"; };
+		4231CD0620A86B55001752EE /* ProcessingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessingInteractor.swift; sourceTree = "<group>"; };
+		4231CD0820A872E1001752EE /* VKPageCountDataWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKPageCountDataWorker.swift; sourceTree = "<group>"; };
+		4231CD0A20A87334001752EE /* VKPageCountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKPageCountModel.swift; sourceTree = "<group>"; };
+		4231CD0D20A87776001752EE /* DDPSDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDPSDIContainer.swift; sourceTree = "<group>"; };
+		4231CD1020A87805001752EE /* DDPSSocialProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDPSSocialProxy.swift; sourceTree = "<group>"; };
+		4231CD1220A87CB5001752EE /* DDPSMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDPSMain.swift; sourceTree = "<group>"; };
+		4231CD1420A87D04001752EE /* DDPSQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDPSQueue.swift; sourceTree = "<group>"; };
+		4231CD1720A87D5F001752EE /* DDPSPack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDPSPack.swift; sourceTree = "<group>"; };
+		4231CD1F20A8983E001752EE /* DDPSConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDPSConfig.swift; sourceTree = "<group>"; };
+		4231CD2120A898DB001752EE /* DDPSPackFabric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDPSPackFabric.swift; sourceTree = "<group>"; };
+		4231CD2420A8A019001752EE /* DDPSConfigAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDPSConfigAdapter.swift; sourceTree = "<group>"; };
 		424B6F872098DB55008FF6FE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		424B6F8A2098DC81008FF6FE /* SelectionViewLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewLayer.swift; sourceTree = "<group>"; };
 		424B6F8C2098DC8D008FF6FE /* SelectionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionPresenter.swift; sourceTree = "<group>"; };
@@ -160,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				4231CCEE20A0F242001752EE /* VKViewModel.swift */,
+				4231CD0A20A87334001752EE /* VKPageCountModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -263,20 +292,27 @@
 			isa = PBXGroup;
 			children = (
 				4231CCFA20A36DED001752EE /* VKViewModelDataWorker.swift */,
+				4231CD0820A872E1001752EE /* VKPageCountDataWorker.swift */,
 			);
 			path = DataWorker;
 			sourceTree = "<group>";
 		};
-		4231CCFC20A38A38001752EE /* Proccesing */ = {
+		4231CCFC20A38A38001752EE /* Processing */ = {
 			isa = PBXGroup;
 			children = (
+				4231CD0420A86B3F001752EE /* ProcessingPresenter.swift */,
+				4231CD0620A86B55001752EE /* ProcessingInteractor.swift */,
+				4231CCFF20A86ADC001752EE /* View */,
 			);
-			path = Proccesing;
+			path = Processing;
 			sourceTree = "<group>";
 		};
 		4231CCFD20A38A97001752EE /* DDPS */ = {
 			isa = PBXGroup;
 			children = (
+				4231CD1220A87CB5001752EE /* DDPSMain.swift */,
+				4231CD2320A8A001001752EE /* Config */,
+				4231CD0C20A8775D001752EE /* DIContainer */,
 				4231CCFE20A38AB8001752EE /* Queue */,
 				428D5E122084EADD004237C1 /* Communication */,
 				428D5E022084DC52004237C1 /* Clinet */,
@@ -287,8 +323,54 @@
 		4231CCFE20A38AB8001752EE /* Queue */ = {
 			isa = PBXGroup;
 			children = (
+				4231CD1620A87D3D001752EE /* Pack */,
+				4231CD1420A87D04001752EE /* DDPSQueue.swift */,
 			);
 			path = Queue;
+			sourceTree = "<group>";
+		};
+		4231CCFF20A86ADC001752EE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4231CD0220A86B25001752EE /* ProcessingViewLayer.swift */,
+				4231CD0020A86AFC001752EE /* ProcessingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4231CD0C20A8775D001752EE /* DIContainer */ = {
+			isa = PBXGroup;
+			children = (
+				4231CD0F20A877AA001752EE /* Proxy */,
+				4231CD0D20A87776001752EE /* DDPSDIContainer.swift */,
+			);
+			path = DIContainer;
+			sourceTree = "<group>";
+		};
+		4231CD0F20A877AA001752EE /* Proxy */ = {
+			isa = PBXGroup;
+			children = (
+				4231CD1020A87805001752EE /* DDPSSocialProxy.swift */,
+			);
+			path = Proxy;
+			sourceTree = "<group>";
+		};
+		4231CD1620A87D3D001752EE /* Pack */ = {
+			isa = PBXGroup;
+			children = (
+				4231CD1720A87D5F001752EE /* DDPSPack.swift */,
+				4231CD2120A898DB001752EE /* DDPSPackFabric.swift */,
+			);
+			path = Pack;
+			sourceTree = "<group>";
+		};
+		4231CD2320A8A001001752EE /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				4231CD1F20A8983E001752EE /* DDPSConfig.swift */,
+				4231CD2420A8A019001752EE /* DDPSConfigAdapter.swift */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 		424B6F892098DC57008FF6FE /* Selection */ = {
@@ -388,7 +470,7 @@
 		428D5E052084DC70004237C1 /* Flow */ = {
 			isa = PBXGroup;
 			children = (
-				4231CCFC20A38A38001752EE /* Proccesing */,
+				4231CCFC20A38A38001752EE /* Processing */,
 				4231CCD5209F5BF7001752EE /* Search */,
 				424B6F892098DC57008FF6FE /* Selection */,
 			);
@@ -678,11 +760,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4231CD1120A87805001752EE /* DDPSSocialProxy.swift in Sources */,
 				42E68DEC2098CB52004BFEF4 /* InstResolution.swift in Sources */,
 				42F64B1C209908FE00A7658A /* InstagramAPIConfig.swift in Sources */,
 				4231CCDE209F5C54001752EE /* SearchInteractor.swift in Sources */,
 				428D5E0E2084E67A004237C1 /* AvaibleStatus.swift in Sources */,
 				4231CCE0209F5DC2001752EE /* AppWireframe.swift in Sources */,
+				4231CD0B20A87334001752EE /* VKPageCountModel.swift in Sources */,
 				42247A172098D3A500E2026B /* REST.swift in Sources */,
 				428D5E142084EB3A004237C1 /* BLEManager.swift in Sources */,
 				42F64B0F2098EA8C00A7658A /* AppRouter.swift in Sources */,
@@ -693,7 +777,10 @@
 				42E68DF32098CC49004BFEF4 /* InstLocation.swift in Sources */,
 				428D5E102084E7A6004237C1 /* ConnectionType.swift in Sources */,
 				428D5E162084F30D004237C1 /* ClientCoordinator.swift in Sources */,
+				4231CD2520A8A019001752EE /* DDPSConfigAdapter.swift in Sources */,
+				4231CD1320A87CB5001752EE /* DDPSMain.swift in Sources */,
 				42247A1E2098D88100E2026B /* WebView.swift in Sources */,
+				4231CD0320A86B25001752EE /* ProcessingViewLayer.swift in Sources */,
 				428D5E212098BFEF004237C1 /* InstagramAPIInterface.swift in Sources */,
 				42F64B122098EF1C00A7658A /* Extension+UIView.swift in Sources */,
 				4231CCEB20A0F12D001752EE /* SearchTable.swift in Sources */,
@@ -706,11 +793,15 @@
 				4231CCED20A0F20F001752EE /* SearchTableCell.swift in Sources */,
 				4231CCFB20A36DED001752EE /* VKViewModelDataWorker.swift in Sources */,
 				42E68DE02098C8CD004BFEF4 /* InstUser.swift in Sources */,
+				4231CD1520A87D04001752EE /* DDPSQueue.swift in Sources */,
+				4231CD0720A86B55001752EE /* ProcessingInteractor.swift in Sources */,
+				4231CD0120A86AFD001752EE /* ProcessingView.swift in Sources */,
 				42F64B152098F0A700A7658A /* SocialButton.swift in Sources */,
 				42F64B1A2098F6FA00A7658A /* SelectionInteractor.swift in Sources */,
 				424B6F8B2098DC81008FF6FE /* SelectionViewLayer.swift in Sources */,
 				428D5E1C2098BF3E004237C1 /* SocialAPIKit.swift in Sources */,
 				4231CCF420A33914001752EE /* VKAPIRequest.swift in Sources */,
+				4231CD2220A898DB001752EE /* DDPSPackFabric.swift in Sources */,
 				420067CA209F39B700C8A5AC /* VKAPIInterface.swift in Sources */,
 				428D5E0A2084E1F0004237C1 /* ChargeLevel.swift in Sources */,
 				428D5E072084DC85004237C1 /* Client.swift in Sources */,
@@ -720,10 +811,15 @@
 				420067CD209F3A2F00C8A5AC /* VKAPIConfig.swift in Sources */,
 				42E68DEE2098CB89004BFEF4 /* InstMediaType.swift in Sources */,
 				4231CCEF20A0F242001752EE /* VKViewModel.swift in Sources */,
+				4231CD1820A87D5F001752EE /* DDPSPack.swift in Sources */,
+				4231CD0920A872E1001752EE /* VKPageCountDataWorker.swift in Sources */,
 				4231CCD8209F5C24001752EE /* SearchViewLayer.swift in Sources */,
 				4231CCF220A0FCCD001752EE /* SearchBar.swift in Sources */,
 				42E68DE52098C904004BFEF4 /* InstImage.swift in Sources */,
+				4231CD0520A86B3F001752EE /* ProcessingPresenter.swift in Sources */,
+				4231CD0E20A87776001752EE /* DDPSDIContainer.swift in Sources */,
 				4231CCDC209F5C41001752EE /* SearchPresenter.swift in Sources */,
+				4231CD2020A8983E001752EE /* DDPSConfig.swift in Sources */,
 				4231CCD1209F54B0001752EE /* Extension+UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
